@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css2?family=Sriracha&display=swap);
+
+body{
+    background-color: #18122B;
+    font-family: 'Sriracha', cursive;
+    color: #C1AEFC;
+    align-items: center;
+}
+
+@media (min-width:1200px){
+    .container{
+        max-width: 990px;
+    }
+}
+
+
+#boxin{
+    width: 100%;
+    margin-top: 80px;
+}
+
+#ducktext p#top{
+    font-size: 32px;
+}
+#ducktext p#bot{
+    font-size: 48px;
+}
+
+#CharImg{
+    width: 550px;
+}
+#auto-type{
+    color: rgb(71, 126, 173);
+}
+
+.btn{
+    width: 200px;
+    font-size: 60px;
+    color: #C1AEFC;
+}
+.btn:hover{
+    color: #9170f5;
+}
+
+.carousel-item {
+   text-align: center;
+}

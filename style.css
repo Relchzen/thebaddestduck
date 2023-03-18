@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css2?family=Sriracha&display=swap);
+
+body{
+    background-color: #403660;
+    font-family: 'Sriracha', cursive;
+    color: #8e7cc3;
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+@media (min-width:1200px){
+    .container{
+        max-width: 970px;
+    }
+}
+
+progress {
+    border: 2px solid black;
+    border-radius: 3px;
+    width: 200px;
+    height: 20px;
+    background: crimson;
+  }
+
+  progress {
+    color: lightblue;
+  }
+  
+  progress::-moz-progress-bar {
+    background: lightblue;
+  }
+  
+  progress::-webkit-progress-value {
+    background: rgb(8, 253, 4);
+  }
+  
+  progress::-webkit-progress-bar {
+    background: rgb(254, 254, 254);
+  }
+
+button{
+    margin-top: 20px;
+    background-color: green;
+}
+
+
+#boxStat{
+  background-color: #403660;
+}
