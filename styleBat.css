@@ -12,10 +12,14 @@ body{
     }
 }
 
+#clock{
+    margin-top: 5px;
+    font-size: 26px;
+}
 
 #boxin{
     width: 100%;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 #ducktext p#top{
@@ -39,12 +43,12 @@ body{
 .btn{
     width: 200px;
     font-size: 60px;
-    color: #C1AEFC;
+    color: #a88aff;
 }
 .btn:hover{
     color: #9170f5;
 }
 
-.carousel-item {
-   text-align: center;
+.card{
+    background-color: #C1AEFC;
 }
