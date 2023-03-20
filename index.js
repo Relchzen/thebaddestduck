@@ -17,3 +17,15 @@ function incVal(){
     food.value += 5;
     mental_health.value += 1;
 }
+
+function incFood(){
+    food.value +=5;
+    health.value -= 5;
+    stamina.value -= 10;
+}
+
+function incMed(){
+    mental_health +=20;
+    food.value -= 10;
+    stamina.value -= 10;
+}
