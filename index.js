@@ -18,6 +18,13 @@ function incVal() {
     mental_health.value += 1;
 }
 
+function incSleep(){
+    sleep.value += 20;
+    stamina.value += 10;
+    food.value -= 20;
+    mental_health.value += 1;
+}
+
 //ini code maksudnya pas di click play character lgsg masuk ke main page + udah ada gambar player sebagai char terpilih
 //tapi masih belom muncul gamabrnya, function dah bekerja
 var canvas = document.createElement("canvas");
