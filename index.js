@@ -29,3 +29,9 @@ function incMed(){
     food.value -= 10;
     stamina.value -= 10;
 }
+
+function incSleep(){
+    stamina.value += 10;
+    health.value -= 5;
+    food.value -= 5;
+}
