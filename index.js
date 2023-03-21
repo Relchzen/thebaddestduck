@@ -61,7 +61,7 @@ function charSelect2() {
 }
 function charSelect3() {
     var playerimg = document.createElement("img");
-    playerimg.src = "./asset/duck-player-unscreen.gif";
+    playerimg.setAttribute("src","./asset/Slime.play.gif");
     var targetDoc = window.location.href = "index.html";
     targetDoc.addEventListener('load', function () {
         var player = targetDoc.document.getElementById('player');
