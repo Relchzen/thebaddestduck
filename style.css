@@ -53,4 +53,10 @@ button{
 #sangkar{
   height: 500px;
   border: solid black;
+  background-color: #8e7cc3;
+  color:#403660;
+}
+
+#pimg{
+  width: 130px;
 }
