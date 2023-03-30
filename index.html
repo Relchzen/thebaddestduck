@@ -15,28 +15,39 @@
     <div class="bungkus">
         <div class="container-md text-center rounded-3" id="bar">
             <div class="row ">
-                <div class="col text-start">
-                    <p><h4>Health</h4></p>
+                <div class="col">
+                    <p>
+                    <h4>Health</h4>
+                    </p>
                     <progress id="health" value="100" max="100" onclick="getval()"></progress>
                 </div>
-                <div class="col text-start">
-                    <p><h4>Stamina</h4></p>
+                <div class="col">
+                    <p>
+                    <h4>Stamina</h4>
+                    </p>
                     <progress id="stamina" value="100" max="100" onclick="getval()"></progress>
                 </div>
-                <div class="col text-start">
-                    <p><h4>Food</h4></p>
+                <div class="col">
+                    <p>
+                    <h4>Food</h4>
+                    </p>
                     <progress id="food" value="100" max="100" onclick="getval()"></progress>
                 </div>
-                <div class="col text-start">
-                    <p><h4>Mental Health</h4></p>
+                <div class="col">
+                    <p>
+                    <h4>Mental Health</h4>
+                    </p>
                     <progress id="mental_health" value="100" max="100" onclick="getval()"></progress>
                 </div>
             </div>
         </div>
-        <div class="container bg-info">
+        <div class="container">
             <div class="row">
-                <div>
-                    
+                <div class="col text-center rounded-4" id="sangkar">
+                    <p>Playground</p>
+                    <div id="player">
+                        <img id="pimg" src="./asset/bat-gif.gif">
+                    </div>
                 </div>
             </div>
         </div>
@@ -46,19 +57,20 @@
                     <button onclick="incVal()">Play</button>
                 </div>
                 <div class="col">
-                    <button onclick="incVal()">Sleep</button>
+                    <button onclick="incSleep()">Sleep</button>
                 </div>
                 <div class="col">
-                    <button onclick="incVal()">Food</button>
+                    <button onclick="incFood()">Food</button>
                 </div>
                 <div class="col">
-                    <button onclick="incVal()">Medicine</button>
+                    <button onclick="incMed()">Medicine</button>
                 </div>
-            </div>
-        </div>
-        <div id="Playground">
-            <div id="player">
-                <img id="pimg"src="">
+                <div>
+                    <button onclick="moveup()">UP</button>
+                    <button onclick="movedown()">DOWN</button>
+                    <button onclick="moveleft()">LEFT</button>
+                    <button onclick="moveright()">RIGHT</button>
+                </div>
             </div>
         </div>
     </div>
