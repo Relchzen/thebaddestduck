@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Sriracha&display=swap);
 
 body{
-    background-image: url(./asset/pixelBG.gif);
+    background-image: url(./asset/pixelBG2.gif);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Sriracha', cursive;
@@ -57,7 +57,7 @@ button{
   height: 500px;
   border: solid black;
   background-color: #8e7cc3;
-  background-image: url(./asset/pixelBG4.gif);
+  background-image: url(./asset/pixelBG2.gif);
   background-repeat: no-repeat;
   background-size: cover;
 }
