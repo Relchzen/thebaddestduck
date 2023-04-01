@@ -1,0 +1,118 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d033b;
+  font-family: "Indie Flower";
+  color: #e5b8f4;
+}
+
+.container {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 20% 50% 30%;
+  margin-top: 20px;
+  height: 90vh;
+  width: 90vw;
+  background-color: red;
+}
+
+.characterbox {
+  background-color: green;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: auto auto auto;
+}
+
+.charactercard {
+  display: flex;
+  margin: 10px;
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid gold;
+  transition: 100ms ease;
+  filter: grayscale(75%);
+  -webkit-filter: grayscale(75%);
+  -moz-filter: grayscale(75%);
+}
+
+.charactercard:hover,
+.charactive {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 100ms ease;
+}
+
+.characterpreview {
+  background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#characterImage {
+  width: 400px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: coral;
+}
+
+.description #charactername {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #e5b8f4;
+  font-size: 32px;
+  width: 80%;
+  height: 60px;
+  background-color: blue;
+  margin-top: 50px;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.description #characterdescription {
+  width: 80%;
+  min-height: 100px;
+  background-color: blue;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.description #characterbutton {
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: blue;
+  width: 30%;
+  font-family: "Indie Flower";
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  transition: 100ms;
+}
+
+#characterbutton {
+  text-decoration: none;
+  color: #e5b8f4;
+}
+
+#characterbutton:hover {
+  transition: 100ms ease;
+  transform: scale(1.2);
+}
