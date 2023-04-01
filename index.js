@@ -39,6 +39,15 @@ function incMed(){
   mental_health.value += 10;
 }
 
+function character(){
+  const summon = localStorage.getItem('images');
+  const pet = document.getElementById("player");
+  pet.createElement("img");
+  pet.setAttribute("src", summon);
+  pet.setAttribute("id", "char");
+}
+
+
 //ini code maksudnya pas di click play character lgsg masuk ke main page + udah ada gambar pimg sebagai char terpilih
 //tapi masih belom muncul gamabrnya, function dah bekerja
 var canvas = document.createElement("canvas");

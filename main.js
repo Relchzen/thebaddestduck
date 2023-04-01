@@ -75,4 +75,6 @@ function character() {
     pet.createElement("img");
     pet.setAttribute("src", summon);
     pet.setAttribute("id", "char");
+ 
 }
+

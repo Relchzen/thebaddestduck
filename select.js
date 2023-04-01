@@ -50,3 +50,11 @@ $("#characterbutton").click(function() {
   window.location.href="index.html";
   }
 });
+
+$("#characterbutton").click(function(){
+    const pet = document.getElementById("previewImage");
+    if(pet.value){
+      window.localStorage.setItem("previewImage", pet.value);
+      window.location.href = "main.html";
+    }
+});

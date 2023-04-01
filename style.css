@@ -40,7 +40,7 @@ progress {
   
   progress::-webkit-progress-bar {
     background: rgb(254, 254, 254);
-  }
+}
 
 button{
     margin-top: 20px;

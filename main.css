@@ -6,22 +6,36 @@ body {
   background-size: cover;
   font-family: 'Sriracha', cursive;
   color: #233251;
+  display: grid;
+  background-color: #403660;
+  font-family: 'Sriracha', cursive;
+  color: #8e7cc3;
   align-items: center;
   margin-top: 20px;
   margin-left: 80px;
   margin-right: 80px;
 }
+ 
+#statusbar{
+  background-color: pink;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid black;
+  border-radius: 5px;
+  width: 800px;
+  height: 150px;
+}
 
-.container {
+.container{
   margin-left: 20px;
   margin-top: 20px;
   margin-right: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
   justify-content: space-around;
-  display: flex;
+  display: grid;
   grid-template-columns: auto auto;
-
+  
 }
 
 progress {
@@ -29,12 +43,9 @@ progress {
   border-radius: 10px;
   width: 200px;
   height: 20px;
-  background: crimson;
+  background-color: crimson;
 }
 
-progress {
-  color: lightblue;
-}
 
 progress::-moz-progress-bar {
   background: lightblue;
