@@ -116,3 +116,8 @@ body {
   transition: 100ms ease;
   transform: scale(1.2);
 }
+
+#clock{
+  margin-top: 5px;
+  font-size: 32px;
+}
