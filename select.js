@@ -47,6 +47,6 @@ $("#characterbutton").click(function() {
   const petname = document.getElementById("charactername");
   if(petname.value) {
     window.localStorage.setItem("charactername", petname.value);
-  window.location.href="main.html";
+  window.location.href="index.html";
   }
 });

@@ -1,7 +1,9 @@
 body {
-  background-color: #2d033b;
+  background-image: url(./asset/pixelBG.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Indie Flower";
-  color: #e5b8f4;
+  color: #233251;
 }
 
 .container {
