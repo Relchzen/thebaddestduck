@@ -13,7 +13,10 @@
 </head>
 <body>
     <div class="container">
-        <div class="title">BADDEST DUCK</div>
+        <div id="ducktext" class="text-left">
+            <p id="top">Lets Play With</p>
+            <p id="bot">The <span id="auto-type"></span> Pet</p>
+        </div>
         <div class="menu">
             <button id="clickhere">
                     CLICK HERE
@@ -25,5 +28,16 @@
             window.location.href="select.html";
         });
     </script>
+
+    <!--autotype-->
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#auto-type', {
+      strings: ['Baddest', 'Coolest', 'strongest'],
+      typeSpeed: 100,
+      backSpeed: 150,
+      loop: true
+    });
+  </script>
 </body>
 </html>
