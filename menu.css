@@ -1,6 +1,9 @@
 body {
-  background-color: #2d033b;
+  background-image: url(./asset/pixelBG.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Indie Flower";
+  color: #233251;
 }
 
 .container {
@@ -16,6 +19,11 @@ body {
   font-size: 72px;
 }
 
+#ducktext{
+  font-size: 64px;
+  text-align: center;
+  font-weight: 500;
+}
 .menu {
   display: flex;
   justify-content: center;

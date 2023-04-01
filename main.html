@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
@@ -36,23 +37,28 @@
                 <div id="mentalHealth">
                     <label>Mental Health</label>
                     <br>
-                    <progress id="mental_health" value="100" max="100" onclick="getval()"></progress>
+                    <progress id="mental_health" value="1000" max="1000" ></progress>
                 </div>
             </div>
         </div>
         <div id="main">
             <div>
-                <label>playground</label>
+                <div id="clock">
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </div>
             </div>
         </div>
         <div id="level">
             <label>level</label>
             <br>
-            <progress id="level" value="100" max="100" onclick="getval()"></progress>
+            <progress id="level" value="100" max="100" ></progress>
         </div>
         <div id="button">
             <div>
-                <button onclick="incVal()">Play</button>
+                <button >Play</button>
             </div>
             <div>
                 <button onclick="incSleep()">Sleep</button>
@@ -65,6 +71,7 @@
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
