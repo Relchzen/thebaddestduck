@@ -26,11 +26,21 @@ function displayTime() {
         min = min - 48;
     }
 
-    if(sec == 10 || sec == 20 || sec == 30 || sec == 40 || sec == 50){
-        health.value -= 1;
-        stamina.value -= 1;
-        food.value -= 1;
-        mental_health.value--;
+    //health
+    if(sec == 10 || sec == 20 || sec == 30 || sec == 40 || sec == 50 || sec == 60){
+        health.value -= 0.4;
+    }
+    //stamina
+    if(sec == 13 || sec == 24 || sec == 35 || sec == 46 || sec == 57 || sec == 8){
+        stamina.value -= 0.4;
+    }
+    //food
+    if(sec == 15 || sec == 20 || sec == 30 || sec == 35 || sec == 50 || sec == 55){
+        food.value -= 0.3;
+    }
+    //mental_health
+    if(sec == 11 || sec == 22 || sec == 33 || sec == 44 || sec == 55 || sec == 6){
+        mental_health.value -= 0.2;
     }
 
     document.getElementById('minutes').innerHTML = min;
