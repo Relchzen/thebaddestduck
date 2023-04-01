@@ -1,3 +1,115 @@
+@import url(https://fonts.googleapis.com/css2?family=Sriracha&display=swap);
+
 body {
-  display: grid;
+  background-image: url(./asset/pixelBG2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Sriracha', cursive;
+  color: #233251;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.container {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+  grid-template-columns: auto auto;
+
+}
+
+progress {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 200px;
+  height: 20px;
+  background: crimson;
+}
+
+progress {
+  color: lightblue;
+}
+
+progress::-moz-progress-bar {
+  background: lightblue;
+}
+
+progress::-webkit-progress-value {
+  border-radius: 10px;
+  background: rgb(8, 253, 4);
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 10px;
+  background: rgb(254, 254, 254);
+}
+
+#health {
+  margin-bottom: 10px;
+  width: 200px;
+
+}
+
+#stamina {
+  margin-bottom: 10px;
+  width: 200px;
+
+}
+
+#mentalHealth {
+  margin-bottom: 10px;
+  width: 200px;
+
+}
+
+#food {
+  margin-bottom: 10px;
+  width: 200px;
+
+}
+
+#main {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(./asset/pixelBG2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 470px;
+  border-radius: 4px;
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+#level {
+  text-align: center;
+}
+
+#level progress::-webkit-progress-value {
+  border-radius: 10px;
+  background: rgba(139, 255, 38, 0.434);
+}
+
+#button {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+#button button {
+  margin-top: 20px;
+  background-color: rgba(249, 249, 249, 0.398);
+  border-radius: 12px;
+  width: 100px;
 }
