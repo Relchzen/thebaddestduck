@@ -2,12 +2,25 @@ let health = document.getElementById("healthval");
 let stamina = document.getElementById("staminaval");
 let food = document.getElementById("foodval");
 let mental_health = document.getElementById("mental_health");
+let level = document.getElementById("levelval");
+var leveling = document.getElementById("levelup");
+leveling = 0;
+
+function levelup(){
+    if(level.value == 1000){
+        level.value -=999;
+        leveling +=1;
+        document.getElementById("levelup").innerHTML = leveling;
+    }
+}
 
 function incSleep(){
     stamina.value += 9;
     food.value -= 30;
     health.value += 6;
     mental_health.value += 2;
+    level.value +=100;
+    levelup()
 }
 
 function incFood(){
@@ -15,6 +28,8 @@ function incFood(){
     food.value += 16;
     health.value -=6;
     mental_health.value += 1;
+    level.value +=10;
+    levelup
 }
 
 function incMed(){
@@ -22,6 +37,8 @@ function incMed(){
     food.value -= 10;
     health.value += 20;
     mental_health.value -= 6;
+    level.value +=10;
+    levelup
 }
 
 //clockscript
