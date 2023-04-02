@@ -6,7 +6,6 @@ body {
   background-size:120%;
   font-family: 'Sriracha', cursive;
   color: #233251;
-  display: grid;
   background-color: #403660;
   font-family: 'Sriracha', cursive;
   color: #8e7cc3;
@@ -14,16 +13,6 @@ body {
   margin-top: 20px;
   margin-left: 80px;
   margin-right: 80px;
-}
- 
-#statusbar{
-  background-color: pink;
-  margin-left: auto;
-  margin-right: auto;
-  border: 3px solid black;
-  border-radius: 5px;
-  width: 800px;
-  height: 150px;
 }
 
 .container{
@@ -33,7 +22,7 @@ body {
   margin-bottom: 20px;
   text-align: center;
   justify-content: space-around;
-  display: grid;
+  display: flex;
   grid-template-columns: auto auto;
   
 }

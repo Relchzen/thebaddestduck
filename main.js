@@ -28,8 +28,8 @@ function incFood(){
     food.value += 16;
     health.value -=6;
     mental_health.value += 1;
-    level.value +=10;
-    levelup
+    level.value +=100;
+    levelup()
 }
 
 function incMed(){
@@ -37,8 +37,8 @@ function incMed(){
     food.value -= 10;
     health.value += 20;
     mental_health.value -= 6;
-    level.value +=10;
-    levelup
+    level.value +=100;
+    levelup()
 }
 
 //clockscript
