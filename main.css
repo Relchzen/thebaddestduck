@@ -1,11 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Sriracha&display=swap);
 body {
-  background-image: url(./asset/pixelBG2.gif);
   background-repeat: repeat-y;
   background-size:110%;
   background-color: #403660;
   font-family: 'Sriracha', cursive;
-  color: #f4ffa3;
+  color: #8c33cc;
   align-items: center;
   margin-top: 20px;
   margin-left: 80px;

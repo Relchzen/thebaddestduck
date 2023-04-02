@@ -48,6 +48,8 @@ function displayTime() {
     var sec = dateTime.getSeconds();
     var session = document.getElementById('session');
     var greet = document.getElementById('greeting');
+    const body = document.body
+    const playground = document.getElementById("main")
 
     if (min >= 12) {
         session.innerHTML = 'PM';
@@ -66,16 +68,22 @@ function displayTime() {
     }
 
     //greet
-    if(min >= 6 && min <= 10){
+    if(min >= 4 && min <= 10){
+        body.style.backgroundImage = "url(./asset/pixelBG.gif)";;
+        playground.style.backgroundImage = "url(./asset/pixelBG.gif)";;
         greet = "Good Morning!";
-    }else if(min >= 12 && min <= 14){
+    }else if(min >= 11 && min <= 14){
+        body.style.backgroundImage = "url(./asset/pixelBG3.gif)";;
+        playground.style.backgroundImage = "url(./asset/pixelBG3.gif)";;
         greet = "Good Afternoon";
-    }else if(min >= 13 && min <= 19){
+    }else if(min >= 15 && min <= 19){
+        body.style.backgroundImage = "url(./asset/pixelBG2.gif)";;
+        playground.style.backgroundImage = "url(./asset/pixelBG2.gif)";;
         greet = "Good Evening";
-    }else if (min >= 21 || min <= 3){
+    }else if (min >= 20 || min <= 3){
+        body.style.backgroundImage = "url(./asset/pixelBG2.gif)";;
+        playground.style.backgroundImage = "url(./asset/pixelBG2.gif)";;
         greet = "Good Night";
-    }else{
-        greet = "hello"
     }
 
     //health
