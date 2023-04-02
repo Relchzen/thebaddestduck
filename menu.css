@@ -1,28 +1,15 @@
 body {
   background-image: url(./asset/pixelBG.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size:120%;
+  background-repeat:repeat-y;
   font-family: "Indie Flower";
   color: #233251;
-}
-
-.container {
-  /* background-color: red; */
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  /* background-color: blue; */
-  color: #e5b8f4;
-  font-weight: bold;
-  font-size: 72px;
 }
 
 #ducktext{
   font-size: 64px;
   text-align: center;
-  font-weight: 500;
+  font-weight: bold;
 }
 .menu {
   display: flex;
@@ -51,4 +38,13 @@ body {
   box-shadow: 0px 10px;
   font-size: 48px;
   color: black;
+}
+
+#Logo{
+  margin-top: -50px;
+  text-align: center;
+}
+
+#logoimg{
+  width: 350px;
 }

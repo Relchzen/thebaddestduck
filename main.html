@@ -13,33 +13,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <title>BADDEST PET</title>
+    <audio autoplay="1" loop="true" src="./backsound/WIIsong.m4a"></audio>
 </head>
 
 <body>
     <div class="bungkus">
-        <div id="statusbar">
             <div class="container">
                 <div id="health">
                     <label>Health</label>
                     <br>
-                    <progress id="healthval" value="1000" max="1000" ></progress>
+                    <progress id="health" value="100" max="100" onclick="getval()"></progress>
                 </div>
                 <div id="stamina">
                     <label>Stamina</label>
                     <br>
-                    <progress id="staminaval" value="1000" max="1000" ></progress>
+                    <progress id="stamina" value="100" max="100" onclick="getval()"></progress>
                 </div>
                 <div id="food">    
                     <label>Food</label>
                     <br>
-                    <progress id="foodval" value="1000" max="1000" ></progress>
+                    <progress id="food" value="100" max="100" onclick="getval()"></progress>
                 </div>
                 <div id="mentalHealth">
                     <label>Excitement</label>
                     <br>
-                    <progress id="mental_health" value="1000" max="1000" ></progress>
+                    <progress id="mental_health" value="500" max="1000" ></progress>
                 </div>
-            </div>
         </div>
         <div id="main">
             <div>
@@ -50,17 +49,15 @@
                     <span id="session">AM</span>
                 </div>
             </div>
-            <img src="" id="player" />
-    
         </div>
         <div id="level">
-            <label id="level">level</label>
+            <label>level</label>
             <br>
-            <progress id="level" value="" max="100" ></progress>
+            <progress id="level" value="100" max="100" ></progress>
         </div>
         <div id="button">
             <div>
-                <button id="play">Play</button>
+                <button >Play</button>
             </div>
             <div>
                 <button onclick="incSleep()">Sleep</button>

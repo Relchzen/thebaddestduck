@@ -1,18 +1,22 @@
+@import url(https://fonts.googleapis.com/css2?family=Sriracha&display=swap);
+
 body {
   background-image: url(./asset/pixelBG2.gif);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Sriracha', cursive;
+  color: #233251;
   display: grid;
   background-color: #403660;
-  font-family: "Indie Flower";
+  font-family: 'Sriracha', cursive;
   color: #8e7cc3;
   align-items: center;
   margin-top: 20px;
   margin-left: 80px;
   margin-right: 80px;
 }
-
-#statusbar {
+ 
+#statusbar{
   background-color: pink;
   margin-left: auto;
   margin-right: auto;
@@ -29,7 +33,7 @@ body {
   margin-bottom: 20px;
   text-align: center;
   justify-content: space-around;
-  display: grid;
+  display: flex;
   grid-template-columns: auto auto;
 }
 
@@ -52,7 +56,7 @@ progress::-webkit-progress-value {
 
 progress::-webkit-progress-bar {
   border-radius: 10px;
-  background: rgb(254, 254, 254);
+  background: rgb(249, 156, 156);
 }
 
 #health {
@@ -84,15 +88,10 @@ progress::-webkit-progress-bar {
   background-repeat: no-repeat;
   background-size: cover;
   width: 80%;
-  height: 470px;
+  height: 610px;
   border-radius: 4px;
   border: 3px solid black;
   border-radius: 20px;
-}
-
-#player {
-  width: 100px;
-  position: relative;
 }
 
 #level {
@@ -101,7 +100,11 @@ progress::-webkit-progress-bar {
 
 #level progress::-webkit-progress-value {
   border-radius: 10px;
-  background: rgba(139, 255, 38, 0.434);
+  background: rgb(160, 255, 174);
+}
+#level progress::-webkit-progress-bar {
+  border-radius: 10px;
+  background: rgb(255, 211, 130);
 }
 
 #button {

@@ -4,8 +4,8 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url(./asset/pixelBG.gif);
-  background-repeat:no-repeat;
-  background-size: cover;
+  background-repeat:repeat-y;
+  background-size:120%;
   font-family: 'Sriracha', cursive;
   color: #233251;
   background-color: #2d033b;
@@ -27,6 +27,7 @@ body {
 
 .characterbox {
   background-color: rgba(240, 248, 255, 0.600);
+  backdrop-filter: blur(5px);
   display: grid;
   justify-items: center;
   grid-template-rows: auto auto auto;
@@ -61,6 +62,7 @@ body {
 
 .characterpreview {
   background-color: rgba(240, 248, 255, 0.600);
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,6 +77,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: rgba(240, 248, 255, 0.600);
+  backdrop-filter: blur(5px);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
