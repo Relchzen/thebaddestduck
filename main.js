@@ -70,10 +70,12 @@ function displayTime() {
         greet = "Good Morning!";
     }else if(min >= 12 && min <= 14){
         greet = "Good Afternoon";
-    }else if(min >= 16 && min <= 19){
+    }else if(min >= 13 && min <= 19){
         greet = "Good Evening";
-    }else if (min >= 20 || min <= 3){
+    }else if (min >= 21 || min <= 3){
         greet = "Good Night";
+    }else{
+        greet = "hello"
     }
 
     //health

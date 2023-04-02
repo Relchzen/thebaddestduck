@@ -86,7 +86,9 @@ progress::-webkit-progress-bar {
 }
 
 #playground{
-  height: 470px;
+  height: 440px;
+  display:flex;
+  justify-content: center;
 }
 
 #level {
@@ -116,4 +118,10 @@ progress::-webkit-progress-bar {
   background-color: rgba(249, 249, 249, 0.398);
   border-radius: 12px;
   width: 100px;
+}
+
+#player{
+  width: 150px;
+  height: 150px;
+  position: relative;
 }
