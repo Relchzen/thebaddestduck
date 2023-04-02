@@ -51,16 +51,16 @@
                 </div>
             </div>
             <img src="" id="player" />
-            
+    
         </div>
         <div id="level">
-            <label>level</label>
+            <label id="level">level</label>
             <br>
-            <progress id="level" value="100" max="100" ></progress>
+            <progress id="level" value="" max="100" ></progress>
         </div>
         <div id="button">
             <div>
-                <button >Play</button>
+                <button id="play">Play</button>
             </div>
             <div>
                 <button onclick="incSleep()">Sleep</button>
@@ -80,7 +80,11 @@
             const pet = document.getElementById("player");
             pet.setAttribute("src", summon);
         })
+        $("#play").click(function(){
+            window.location.href='play.html';
+        })
     </script>
+    
 </body>
 
 </html>
