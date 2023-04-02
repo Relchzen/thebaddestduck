@@ -3,6 +3,7 @@ let stamina = document.getElementById("staminaval");
 let food = document.getElementById("foodval");
 let mental_health = document.getElementById("mental_health");
 
+
 function incSleep(){
     stamina.value += 9;
     food.value -= 30;
@@ -37,15 +38,7 @@ function displayTime() {
         session.innerHTML = 'AM';
     }
 
-    if (min >= 12 && min <= 23) {
-        min = min - 12;
-    } else if (min >= 24 && min <= 35) {
-        min = min - 24;
-    } else if (min >= 36 && min <= 47) {
-        min = min - 36;
-    } else if (min >= 48 && min <= 59) {
-        min = min - 48;
-    }
+    min = min%12;
 
     //health
     if(sec == 10 || sec == 20 || sec == 30 || sec == 40 || sec == 50 || sec == 60){
@@ -69,12 +62,6 @@ function displayTime() {
 }
 setInterval(displayTime, 10);
 //clockscript  
-function character() {
-    const summon = localStorage.getItem('images');
-    const pet = document.getElementById("player");
-    pet.createElement("img");
-    pet.setAttribute("src", summon);
-    pet.setAttribute("id", "char");
- 
-}
+
+
 

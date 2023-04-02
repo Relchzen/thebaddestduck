@@ -1,22 +1,18 @@
-@import url(https://fonts.googleapis.com/css2?family=Sriracha&display=swap);
-
 body {
   background-image: url(./asset/pixelBG2.gif);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Sriracha', cursive;
-  color: #233251;
   display: grid;
   background-color: #403660;
-  font-family: 'Sriracha', cursive;
+  font-family: "Indie Flower";
   color: #8e7cc3;
   align-items: center;
   margin-top: 20px;
   margin-left: 80px;
   margin-right: 80px;
 }
- 
-#statusbar{
+
+#statusbar {
   background-color: pink;
   margin-left: auto;
   margin-right: auto;
@@ -26,7 +22,7 @@ body {
   height: 150px;
 }
 
-.container{
+.container {
   margin-left: 20px;
   margin-top: 20px;
   margin-right: 20px;
@@ -35,7 +31,6 @@ body {
   justify-content: space-around;
   display: grid;
   grid-template-columns: auto auto;
-  
 }
 
 progress {
@@ -45,7 +40,6 @@ progress {
   height: 20px;
   background-color: crimson;
 }
-
 
 progress::-moz-progress-bar {
   background: lightblue;
@@ -64,25 +58,21 @@ progress::-webkit-progress-bar {
 #health {
   margin-bottom: 10px;
   width: 200px;
-
 }
 
 #stamina {
   margin-bottom: 10px;
   width: 200px;
-
 }
 
 #mentalHealth {
   margin-bottom: 10px;
   width: 200px;
-
 }
 
 #food {
   margin-bottom: 10px;
   width: 200px;
-
 }
 
 #main {
@@ -98,6 +88,11 @@ progress::-webkit-progress-bar {
   border-radius: 4px;
   border: 3px solid black;
   border-radius: 20px;
+}
+
+#player {
+  width: 100px;
+  position: relative;
 }
 
 #level {
