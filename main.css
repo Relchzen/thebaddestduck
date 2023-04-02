@@ -4,11 +4,9 @@ body {
   background-image: url(./asset/pixelBG2.gif);
   background-repeat: repeat-y;
   background-size:120%;
-  font-family: 'Sriracha', cursive;
-  color: #233251;
   background-color: #403660;
   font-family: 'Sriracha', cursive;
-  color: #8e7cc3;
+  color: #f4ffa3;
   align-items: center;
   margin-top: 20px;
   margin-left: 80px;
@@ -47,7 +45,7 @@ progress::-webkit-progress-value {
 
 progress::-webkit-progress-bar {
   border-radius: 10px;
-  background: rgb(254, 254, 254);
+  background: rgb(249, 156, 156);
 }
 
 #health {
@@ -99,7 +97,11 @@ progress::-webkit-progress-bar {
 
 #level progress::-webkit-progress-value {
   border-radius: 10px;
-  background: rgba(139, 255, 38, 0.434);
+  background: rgb(160, 255, 174);
+}
+#level progress::-webkit-progress-bar {
+  border-radius: 10px;
+  background: rgb(255, 211, 130);
 }
 
 #button {
