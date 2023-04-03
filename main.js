@@ -1,17 +1,26 @@
-let health = document.getElementById("healthval");
+    let health = document.getElementById("healthval");
 let stamina = document.getElementById("staminaval");
 let food = document.getElementById("foodval");
 let mental_health = document.getElementById("mental_health");
-let level = document.getElementById("levelval");
-var leveling = document.getElementById("levelup");
-leveling = 0;
+let xpbar = document.getElementById("levelbar");
+let maxxp = xpbar.getAttribute("max");
+let level = document.getElementById("levelplayer").getAttribute("level");
 
 function levelup(){
-    if(level.value == 1000){
-        level.value -=1000;
-        leveling +=1;
-        document.getElementById("levelup").innerHTML = leveling;
+    var xp = xpbar.value;
+    while(xp >= maxxp) {
+        xp -= maxxp;
+        maxxp += 500;
+        level += 1;
+        document.getElementById("levelplayer").setAttribute("level", level);
+        document.getElementById("levelplayer").innerHTML = level;
+        xpbar.setAttribute("max", maxxp);
+        xpbar.value = xp;
+        window.localStorage.setItem("xp", xp);
+        window.localStorage.setItem("maxxp", maxxp);
+        window.localStorage.setItem("level", level);
     }
+
 }
 
 // Mendapatkan elemen progress bar HTML
@@ -29,32 +38,30 @@ progressBar.addEventListener('change', () => {
   localStorage.setItem('progressCheckpoint', progressBar.value);
 });
 
-
-
 function incSleep(){
-    stamina.value += 9;
-    food.value -= 30;
-    health.value += 6;
-    mental_health.value += 2;
-    level.value +=100;
+    stamina.value += 19;
+    window.localStorage.setItem("stamina", stamina.value);
+    food.value -= 3;
+    window.localStorage.setItem("food", food.value);
+    xpbar.value +=100;
+    window.localStorage.setItem("xp", xpbar.value);
     levelup()
 }
 
 function incFood(){
-    stamina.value += 3;
     food.value += 16;
-    health.value -=6;
-    mental_health.value += 1;
-    level.value +=100;
+    window.localStorage.setItem("food", food.value);
+
+    xpbar.value +=100;
+    window.localStorage.setItem("xp", xpbar.value);
     levelup()
 }
 
 function incMed(){
-    stamina.value -= 10;
-    food.value -= 10;
     health.value += 20;
-    mental_health.value -= 6;
-    level.value +=100;
+    window.localStorage.setItem("health", health.value);
+    xpbar.value +=100;
+    window.localStorage.setItem("xp", xpbar.value);
     levelup()
 }
 
@@ -74,7 +81,7 @@ function displayTime() {
         session.innerHTML = 'AM';
     }
 
-    min = min%12;
+    min = min%24;
 
     //greet
     if(min >= 4 && min <= 10){
@@ -98,18 +105,22 @@ function displayTime() {
     //health
     if(sec == 10 || sec == 20 || sec == 30 || sec == 40 || sec == 50 || sec == 60){
         health.value -= 0.4;
+        window.localStorage.setItem('health', health.value);
     }
     //stamina
     if(sec == 13 || sec == 24 || sec == 35 || sec == 46 || sec == 57 || sec == 8){
         stamina.value -= 0.4;
+        window.localStorage.setItem('stamina', stamina.value);
     }
     //food
     if(sec == 15 || sec == 20 || sec == 30 || sec == 35 || sec == 50 || sec == 55){
         food.value -= 0.3;
+        window.localStorage.setItem("food", food.value);
     }
     //mental_health
     if(sec == 11 || sec == 22 || sec == 33 || sec == 44 || sec == 55 || sec == 6){
         mental_health.value -= 0.2;
+        window.localStorage.setItem('mental_health',mental_health.value);
     }
 
     document.getElementById('minutes').innerHTML = min;
@@ -118,5 +129,4 @@ function displayTime() {
 }
 setInterval(displayTime, 10);
 //clockscript  
-
 
