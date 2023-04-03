@@ -6,6 +6,7 @@ let level = document.getElementById("levelval");
 var leveling = document.getElementById("levelup");
 leveling = 0;
 
+
 function levelup(){
     if(level.value == 1000){
         level.value -=1000;
