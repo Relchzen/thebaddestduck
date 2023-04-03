@@ -110,4 +110,3 @@ function displayTime() {
 setInterval(displayTime, 10);
 //clockscript  
 
-

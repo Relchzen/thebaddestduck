@@ -1,26 +1,15 @@
-
 body {
   background-image: url(./asset/pixelBG2.gif);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Sriracha', cursive;
+  font-family: "Sriracha", cursive;
   color: #233251;
   display: grid;
   background-color: #403660;
   font-family: "Indie Flower";
   color: #8e7cc3;
-
-
-body {
-  background-image: url(./asset/pixelBG2.gif);
-  background-repeat: repeat-y;
-  background-size:110%;
-  background-color: #403660;
-  font-family: 'Sriracha', cursive;
-  color: #f4ffa3;
-
-  align-items: center;
 }
+
 .container {
   margin-left: 20px;
   margin-top: 20px;
@@ -51,7 +40,6 @@ body {
   width: 800px;
   height: 150px;
 }
-
 
 .container {
   margin-left: 20px;
@@ -121,9 +109,8 @@ progress::-webkit-progress-bar {
   border-radius: 20px;
 }
 
-#playground{
+#playground {
   height: 470px;
-
 }
 #level {
   text-align: center;
