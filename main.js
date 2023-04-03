@@ -105,12 +105,6 @@ function displayTime() {
     const body = document.body
     const playground = document.getElementById("main")
 
-    if (min >= 12) {
-        session.innerHTML = 'PM';
-    } else {
-        session.innerHTML = 'AM';
-    }
-
     min = min%24;
 
     //greet
