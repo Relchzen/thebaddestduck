@@ -1,6 +1,6 @@
 const characters = document.querySelectorAll(".charactercard");
 let activeCard = null;
-
+window.localStorage.clear();
 // buat pilih karakter
 characters.forEach(function(char) {
   char.addEventListener("click", function() {
@@ -53,9 +53,16 @@ $("#characterbutton").click(function() {
 
 $("#characterbutton").click(function(){
     const pet = document.getElementById("characterImage");
-
+    const value = 500;
     if(pet){
-      window.localStorage.setItem("previewImage", pet.getAttribute("src "));
+      window.localStorage.setItem("previewImage", pet.getAttribute("src"));
+      window.localStorage.setItem("health", value);
+      window.localStorage.setItem("food", value);
+      window.localStorage.setItem("stamina", value);
+      window.localStorage.setItem("mental_health", value);
+      window.localStorage.setItem("maxxp", value);
+      window.localStorage.setItem("xp", 0);
+      window.localStorage.setItem("level", 1);
       window.location.href = "main.html";
     }
 });

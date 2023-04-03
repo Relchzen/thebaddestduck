@@ -17,39 +17,28 @@
 </head>
 
 <body id="background">
-    <div class="bungkus">
-        <div class="container">
-            <div id="health">
+    <div class="container">
+        <div id="statusbar">
+            <div id="level" class="status">
+                <label>level <span id="levelplayer"></span></label>
+                <progress id="levelbar"></progress>
+            </div>
+            <div id="health" class="status">
                 <label>Health</label>
-                <br>
-
-                <progress id="healthval" value="1000" max="1000"></progress>
-
-                <progress id="healthval" value="500" max="1000" onclick="getval()"></progress>
+                <progress id="healthval" max="1000" min="50"></progress>
 
             </div>
-            <div id="stamina">
+            <div id="stamina" class="status">
                 <label>Stamina</label>
-                <br>
-
-                <progress id="staminaval" value="1000" max="1000"></progress>
-
-                <progress id="staminaval" value="500" max="1000" onclick="getval()"></progress>
-
+                <progress id="staminaval" max="1000" min="50"></progress>
             </div>
-            <div id="food">
+            <div id="food" class="status">
                 <label>Food</label>
-                <br>
-
-                <progress id="foodval" value="1000" max="1000"></progress>
-
-                <progress id="foodval" value="500" max="1000" onclick="getval()"></progress>
-
+                <progress id="foodval" max="1000" min="50"></progress>
             </div>
-            <div id="mentalHealth">
+            <div id="mentalHealth" class="status">
                 <label>Excitement</label>
-                <br>
-                <progress id="mental_health" value="500" max="1000"></progress>
+                <progress id="mental_health" min="50" max="1000"></progress>
             </div>
         </div>
         <div id="main">
@@ -62,11 +51,11 @@
                 </div>
                 <div><span id="greeting"></span></div>
                 <div id="playground">
-
+                    <img src="" id="player" />
                 </div>
                 <div id="button">
                     <div>
-                        <button>Play</button>
+                        <button id="play">Play</button>
                     </div>
                     <div>
                         <button onclick="incSleep()">Sleep</button>
@@ -79,13 +68,6 @@
                     </div>
                 </div>
             </div>
-            <img src="" id="player" />
-
-        </div>
-        <div id="level">
-            <label>level <span id="levelup">0</span></label>
-            <br>
-            <progress id="levelval" value="0" max="1000"></progress>
         </div>
     </div>
     <script src="main.js"></script>
@@ -94,6 +76,16 @@
             const summon = window.localStorage.getItem("image");
             const pet = document.getElementById("player");
             pet.setAttribute("src", summon);
+
+            $("#healthval").val(window.localStorage.getItem("health"));
+            $("#foodval").val(window.localStorage.getItem("food"));
+            $("#staminaval").val(window.localStorage.getItem("stamina"));
+            $("#mental_health").val(window.localStorage.getItem("mental_health"));
+            $("#levelbar").attr("max", window.localStorage.getItem("maxxp"));
+            $("#levelbar").val(window.localStorage.getItem("xp"));
+            $("#levelplayer").attr("level", window.localStorage.getItem("level"));
+            $("#levelplayer").html(window.localStorage.getItem("level"));
+
         })
         $("#play").click(function () {
             window.location.href = 'play.html';

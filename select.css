@@ -12,6 +12,7 @@ body {
 }
 
 .container {
+  background-color: rgba(240, 248, 255, 0.6);
   display: grid;
   justify-content: space-between;
   grid-template-columns: 20% 50% 30%;
@@ -23,7 +24,6 @@ body {
 }
 
 .characterbox {
-  background-color: rgba(240, 248, 255, 0.6);
   backdrop-filter: blur(5px);
   display: grid;
   justify-items: center;
@@ -58,7 +58,6 @@ body {
 }
 
 .characterpreview {
-  background-color: rgba(240, 248, 255, 0.6);
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
@@ -84,6 +83,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-family: "Indie Flower";
   font-size: 32px;
   width: 80%;
   height: 60px;
@@ -103,6 +103,7 @@ body {
   border: 2px solid black;
   border-radius: 15px;
   padding: 10px;
+  font-size: 18px;
 }
 
 .description #characterbutton {
