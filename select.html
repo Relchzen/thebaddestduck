@@ -17,7 +17,7 @@
 
 <body>
     <div class="container">
-        <div class="characterbox">
+        <div class="characterbox item1">
             <img class="charactercard" src="asset/bat-gif.gif" id="char1" name="Bob the Bat"
                 desc="i'm vengeance" />
             <img class="charactercard" src="asset/Slime.play.gif" id="char2" name="Sliz the Slime"
@@ -25,26 +25,27 @@
             <img class="charactercard" src="asset/duck-player-unscreen.gif" id="char3" name="Don the Duck"
                 desc="hey buddy!, wanna play with me?" />
         </div>
-        
-        <div class="characterpreview">
+        <div class="characterpreview item2">
             <div id="previewImage"></div>
         </div>
-        <div class="description">
-            <div id="clock">
-                <span id="hour">00</span>
-                <span>:</span>
-                <span id="minutes">00</span>
-                <span>:</span>
-                <span id="seconds">00</span>
-                <span id="session">AM</span>
+            <div class="description item3">
+                <div id="clock">
+                    <span id="hour">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </div>
+                <input id="charactername" placeholder="Give it a name..." required />
+                <div id="characterdescription">
+                </div>
+                <button id="characterbutton" type="submit" hidden>
+                    Play!
+                </button>
             </div>
-            <input id="charactername" placeholder="Give it a name..." required />
-            <div id="characterdescription">
-            </div>
-            <button id="characterbutton" type="submit" hidden>
-                Play!
-            </button>
-        </div>
+            <div class="blankSpace"></div>
+        
     </div>
     <script type="text/javascript" src="select.js"></script>
     <script src="clockScriptReal.js"></script>
