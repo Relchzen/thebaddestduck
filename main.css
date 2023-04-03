@@ -1,7 +1,7 @@
 body {
   background-image: url(./asset/pixelBG2.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: 120%;
   color: #233251;
   display: grid;
   background-color: #403660;

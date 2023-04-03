@@ -1,5 +1,27 @@
 body{
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-size:120%;
+  background-repeat:repeat-y;
+}
+
+#bungkus{
+  width : 70%;
+}
+
+#tombol{
   
+  margin-top: 400px;
+  display: inline;
+
+}
+
+button{
+  margin-top: 20px;
+  background-color: rgba(249, 249, 249, 0.398);
+  border-radius: 12px;
+  width: 100px;
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,17 +9,30 @@
     <script src="play.js"></script>
 </head>
 <body style="background-image: url(./asset/pixelBG2.gif);">
-    <div id="bunkus">
+    <div id="bungkus">
         <h1>Snake</h1>
+        <div id="clock">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+            <span id="session">AM</span>
+        </div>
         <canvas id="board" style="border: 5px solid black;"></canvas>
+        <div>
+            <button id="back" onclick="history.back()" >Go Back</button>
+        </div>
     </div>
-    <div>
-        <button id="back" onclick="history.back()" >Go Back</button>
+    <div id="tombol">
+        <button id="tombol3" onkeypress="changeDirection(e)">Atas</button>
+        <button id="tombol1" onkeypress="changeDirection(e)">Kanan</button>
+        <button id="tombol4" onkeypress="changeDirection(e)">bawah</button>
+        <button id="tombol2" onkeypress="changeDirection(e)">Kiri</button>
     </div>
     <script>
         $("#back").click(function() {
             window.location.href = "main.html";
         })
     </script>
+    <script src="clockScript.js"></script>
 </body>
 </html>
