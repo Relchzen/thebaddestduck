@@ -104,28 +104,27 @@ function displayTime() {
     const body = document.body
     const playground = document.getElementById("main")
 
-    if (min >= 12) {
-        session.innerHTML = 'PM';
-    } else {
-        session.innerHTML = 'AM';
-    }
 
     min = min%24;
 
     //greet
-    if(min >= 4 && min <= 10){
+    if(min >= 0 && min <= 11){
+        session.innerHTML = 'AM';
         body.style.backgroundImage = "url(./asset/pixelBG.gif)";;
         playground.style.backgroundImage = "url(./asset/pixelBG.gif)";;
         greet = "Good Morning!";
-    }else if(min >= 11 && min <= 14){
+    }else if(min >= 12 && min <= 14){
+        session.innerHTML = 'PM';
         body.style.backgroundImage = "url(./asset/pixelBG3.gif)";;
         playground.style.backgroundImage = "url(./asset/pixelBG3.gif)";;
         greet = "Good Afternoon";
-    }else if(min >= 15 && min <= 19){
+    }else if(min >= 15 && min <= 18){
+        session.innerHTML = 'PM';
         body.style.backgroundImage = "url(./asset/pixelBG2.gif)";;
         playground.style.backgroundImage = "url(./asset/pixelBG2.gif)";;
         greet = "Good Evening";
-    }else if (min >= 20 || min <= 3){
+    }else if (min >= 19 || min <= 23){
+        session.innerHTML = 'PM';
         body.style.backgroundImage = "url(./asset/pixelBG2.gif)";;
         playground.style.backgroundImage = "url(./asset/pixelBG2.gif)";;
         greet = "Good Night";
