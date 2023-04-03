@@ -18,39 +18,39 @@
 
 <body id="background">
     <div class="bungkus">
-            <div class="container">
-                <div id="health">
-                    <label>Health</label>
-                    <br>
-<<<<<<<<< Temporary merge branch 1
-                    <progress id="healthval" value="1000" max="1000" ></progress>
-=========
-                    <progress id="healthval" value="500" max="1000" onclick="getval()"></progress>
->>>>>>>>> Temporary merge branch 2
-                </div>
-                <div id="stamina">
-                    <label>Stamina</label>
-                    <br>
-<<<<<<<<< Temporary merge branch 1
-                    <progress id="staminaval" value="1000" max="1000" ></progress>
-=========
-                    <progress id="staminaval" value="500" max="1000" onclick="getval()"></progress>
->>>>>>>>> Temporary merge branch 2
-                </div>
-                <div id="food">    
-                    <label>Food</label>
-                    <br>
-<<<<<<<<< Temporary merge branch 1
-                    <progress id="foodval" value="1000" max="1000" ></progress>
-=========
-                    <progress id="foodval" value="500" max="1000" onclick="getval()"></progress>
->>>>>>>>> Temporary merge branch 2
-                </div>
-                <div id="mentalHealth">
-                    <label>Excitement</label>
-                    <br>
-                    <progress id="mental_health" value="500" max="1000" ></progress>
-                </div>
+        <div class="container">
+            <div id="health">
+                <label>Health</label>
+                <br>
+
+                <progress id="healthval" value="1000" max="1000"></progress>
+
+                <progress id="healthval" value="500" max="1000" onclick="getval()"></progress>
+
+            </div>
+            <div id="stamina">
+                <label>Stamina</label>
+                <br>
+
+                <progress id="staminaval" value="1000" max="1000"></progress>
+
+                <progress id="staminaval" value="500" max="1000" onclick="getval()"></progress>
+
+            </div>
+            <div id="food">
+                <label>Food</label>
+                <br>
+
+                <progress id="foodval" value="1000" max="1000"></progress>
+
+                <progress id="foodval" value="500" max="1000" onclick="getval()"></progress>
+
+            </div>
+            <div id="mentalHealth">
+                <label>Excitement</label>
+                <br>
+                <progress id="mental_health" value="500" max="1000"></progress>
+            </div>
         </div>
         <div id="main">
             <div>
@@ -66,7 +66,7 @@
                 </div>
                 <div id="button">
                     <div>
-                        <button >Play</button>
+                        <button>Play</button>
                     </div>
                     <div>
                         <button onclick="incSleep()">Sleep</button>
@@ -80,12 +80,12 @@
                 </div>
             </div>
             <img src="" id="player" />
-            
+
         </div>
         <div id="level">
             <label>level <span id="levelup">0</span></label>
             <br>
-            <progress id="levelval" value="0" max="1000" ></progress>
+            <progress id="levelval" value="0" max="1000"></progress>
         </div>
     </div>
     <script src="main.js"></script>
@@ -95,11 +95,11 @@
             const pet = document.getElementById("player");
             pet.setAttribute("src", summon);
         })
-        $("#play").click(function(){
-            window.location.href='play.html';
+        $("#play").click(function () {
+            window.location.href = 'play.html';
         })
     </script>
-    
+
 </body>
 
 </html>
