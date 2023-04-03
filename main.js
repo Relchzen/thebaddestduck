@@ -6,6 +6,7 @@ let xpbar = document.getElementById("levelbar");
 let maxxp = xpbar.getAttribute("max");
 let level = document.getElementById("levelplayer").getAttribute("level");
 
+
 function levelup(){
     var xp = xpbar.value;
     while(xp >= maxxp) {
