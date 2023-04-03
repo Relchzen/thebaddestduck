@@ -1,13 +1,3 @@
-body {
-  background-image: url(./asset/pixelBG2.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #233251;
-  display: grid;
-  background-color: #403660;
-  font-family: "Indie Flower";
-  color: #8e7cc3;
-
 
 body {
   background-image: url(./asset/pixelBG2.gif);
@@ -96,14 +86,14 @@ progress::-webkit-progress-bar {
   border-radius: 20px;
 }
 
-<<<<<<<<< Temporary merge branch 1
+
 #player {
   width: 100px;
   position: relative;
-=========
+}
 #playground{
   height: 470px;
->>>>>>>>> Temporary merge branch 2
+
 }
 #level {
   text-align: center;
