@@ -1,3 +1,4 @@
+
 const characters = document.querySelectorAll(".charactercard");
 let activeCard = null;
 

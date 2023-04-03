@@ -11,7 +11,7 @@ body {
   color: #8e7cc3;
 
 
-body {
+
   background-image: url(./asset/pixelBG2.gif);
   background-repeat: repeat-y;
   background-size:110%;
@@ -104,14 +104,14 @@ progress::-webkit-progress-bar {
   border-radius: 20px;
 }
 
-<<<<<<<<< Temporary merge branch 1
+
 #player {
   width: 100px;
   position: relative;
-=========
+}
 #playground{
   height: 470px;
->>>>>>>>> Temporary merge branch 2
+
 }
 #level {
   text-align: center;
