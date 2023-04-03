@@ -23,6 +23,14 @@ body {
   display: flex;
 }
 
+#statusbar {
+  display: grid;
+  background-color: pink;
+  border: 3px solid black;
+  border-radius: 5px;
+  height: 260px;
+}
+
 .status {
   display: grid;
   text-align: left;
