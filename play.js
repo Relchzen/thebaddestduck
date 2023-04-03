@@ -16,25 +16,25 @@ var velocityY = 0;
 
 var snakeBody = [];
 // food 
-var foodX ;
-var foodY ;
+var foodX;
+var foodY;
 
 var gameOver = false;
 
-window.onload = function() {
+window.onload = function () {
     board = document.getElementById("board");
-    board.height = rows *blocksize;
-    board.width = cols *blocksize;
+    board.height = rows * blocksize;
+    board.width = cols * blocksize;
     context = board.getContext("2d");
 
     placeFood();
     document.addEventListener("keydown", changeDirection);
     //Update();
-    setInterval(Update, 1000/10);
+    setInterval(Update, 1000 / 10);
 }
 
 function Update() {
-    if (gameOver){
+    if (gameOver) {
         return;
     }
 
@@ -49,54 +49,72 @@ function Update() {
         placeFood();
     }
 
-    for (let i = snakeBody.length-1; i>0 ; i--){
-        snakeBody[i] = snakeBody[i-1];
+    for (let i = snakeBody.length - 1; i > 0; i--) {
+        snakeBody[i] = snakeBody[i - 1];
     }
-    if (snakeBody.length){
+    if (snakeBody.length) {
         snakeBody[0] = [snakeX, snakeY];
     }
 
     context.fillStyle = "lime";
     snakeX += velocityX * blocksize;
-    snakeY += velocityY  * blocksize;
+    snakeY += velocityY * blocksize;
     context.fillRect(snakeX, snakeY, blocksize, blocksize);
-    for(let i = 0; i<snakeBody.length; i++){
+    for (let i = 0; i < snakeBody.length; i++) {
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blocksize, blocksize);
     }
     //gameover condition
-    if (snakeX <0 || snakeX > cols*blocksize || snakeY < 0 || snakeY > rows*blocksize){
+    if (snakeX < 0 || snakeX > cols * blocksize || snakeY < 0 || snakeY > rows * blocksize) {
         gameOver = true;
         alert("Game Over");
     }
-    for (let i = 0; i < snakeBody.length; i++){
-        if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]){
+    for (let i = 0; i < snakeBody.length; i++) {
+        if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOver = true;
             alert("Game Over");
         }
     }
 }
 
-function changeDirection(e){
-    if (e.code == "ArrowUp" && velocityY != 1){
+function changeDirection(e) {
+    if (e.code == "ArrowUp" && velocityY != 1) {
         velocityX = 0;
         velocityY = -1;
     }
-    else if (e.code == "ArrowDown" && velocityY != -1){
+    else if (e.code == "ArrowDown" && velocityY != -1) {
         velocityX = 0;
         velocityY = 1;
     }
-    else if (e.code == "ArrowLeft" && velocityX != 1){
+    else if (e.code == "ArrowLeft" && velocityX != 1) {
         velocityX = -1;
         velocityY = 0;
     }
-    else if (e.code == "ArrowRight" && velocityX != -1){
+    else if (e.code == "ArrowRight" && velocityX != -1) {
         velocityX = 1;
         velocityY = 0;
+
     }
 }
 
-function placeFood(){
+function moveUp(){
+    velocityX = 0;
+    velocityY = -1;
+}
+function moveDown(){
+    velocityX = 0;
+    velocityY = 1;
+}
+function moveLeft(){
+    velocityX = -1;
+    velocityY = 0;
+}
+function moveRight(){
+    velocityX = 1;
+    velocityY = 0;
+}
+
+function placeFood() {
     //0-1) *cols -> (0-19.9999) ->(0-19) *25
-    foodX = Math.floor(Math.random()* cols) *blocksize;
-    foodY = Math.floor(Math.random()* rows) *blocksize;
+    foodX = Math.floor(Math.random() * cols) * blocksize;
+    foodY = Math.floor(Math.random() * rows) * blocksize;
 }
