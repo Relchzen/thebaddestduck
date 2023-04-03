@@ -72,18 +72,20 @@
     <script src="main.js"></script>
     <script>
         $(document).ready(function () {
+            $("#levelplayer").attr("level", localStorage.getItem("level"));
+            $("#levelplayer").html(localStorage.getItem("level"));
+            $("#levelbar").val(localStorage.getItem("xp"));
+            $("#levelbar").attr("max", localStorage.getItem("maxxp"));
+
+            $("#healthval").val(localStorage.getItem("health"));
+            $("#staminaval").val(localStorage.getItem("stamina"));
+            $("#foodval").val(localStorage.getItem("food"));
+            $("#mental_health").val(localStorage.getItem("mental_health"));
+            
             const summon = window.localStorage.getItem("image");
             const pet = document.getElementById("player");
             pet.setAttribute("src", summon);
 
-            $("#healthval").val(window.localStorage.getItem("health"));
-            $("#foodval").val(window.localStorage.getItem("food"));
-            $("#staminaval").val(window.localStorage.getItem("stamina"));
-            $("#mental_health").val(window.localStorage.getItem("mental_health"));
-            $("#levelbar").attr("max", window.localStorage.getItem("maxxp"));
-            $("#levelbar").val(window.localStorage.getItem("xp"));
-            $("#levelplayer").attr("level", window.localStorage.getItem("level"));
-            $("#levelplayer").html(window.localStorage.getItem("level"));
 
         })
         $("#play").click(function () {

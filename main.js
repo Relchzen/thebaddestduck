@@ -3,19 +3,21 @@ let stamina = document.getElementById("staminaval");
 let food = document.getElementById("foodval");
 let mental_health = document.getElementById("mental_health");
 let xpbar = document.getElementById("levelbar");
-let maxxp = xpbar.getAttribute("max");
-let level = document.getElementById("levelplayer").getAttribute("level");
 
 
 function levelup(){
+    var levelplayer = document.getElementById("levelplayer");
+
+    var level = Number(levelplayer.getAttribute("level"));
+    var maxxp = Number(xpbar.getAttribute("max"));
     var xp = xpbar.value;
     while(xp >= maxxp) {
         xp -= maxxp;
         maxxp += 500;
         level += 1;
-        document.getElementById("levelplayer").setAttribute("level", level);
-        document.getElementById("levelplayer").innerHTML = level;
+        levelplayer.innerHTML = level;
         xpbar.setAttribute("max", maxxp);
+        levelplayer.setAttribute("level", level);
         xpbar.value = xp;
         window.localStorage.setItem("xp", xp);
         window.localStorage.setItem("maxxp", maxxp);
@@ -24,20 +26,20 @@ function levelup(){
 
 }
 
-// Mendapatkan elemen progress bar HTML
-const progressBar = document.querySelector('#health');
+// // Mendapatkan elemen progress bar HTML
+// const progressBar = document.querySelector('#health');
 
-// Memeriksa apakah ada checkpoint progress di local storage
-const progressCheckpoint = localStorage.getItem('progressCheckpoint');
-if (progressCheckpoint) {
-  // Jika ada, mengatur nilai progress bar HTML ke nilai checkpoint
-  progressBar.value = progressCheckpoint;
-}
+// // Memeriksa apakah ada checkpoint progress di local storage
+// const progressCheckpoint = localStorage.getItem('progressCheckpoint');
+// if (progressCheckpoint) {
+//   // Jika ada, mengatur nilai progress bar HTML ke nilai checkpoint
+//   progressBar.value = progressCheckpoint;
+// }
 
-// Menyimpan nilai progress bar HTML ke local storage setiap kali nilai berubah
-progressBar.addEventListener('change', () => {
-  localStorage.setItem('progressCheckpoint', progressBar.value);
-});
+// // Menyimpan nilai progress bar HTML ke local storage setiap kali nilai berubah
+// progressBar.addEventListener('change', () => {
+//   localStorage.setItem('progressCheckpoint', progressBar.value);
+// });
 
 function incSleep(){
     stamina.value += 190;
