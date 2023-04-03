@@ -18,56 +18,69 @@
 
 <body id="background">
     <div class="bungkus">
-
         <div class="container">
             <div id="health">
                 <label>Health</label>
                 <br>
+
+                <progress id="healthval" value="1000" max="1000"></progress>
+
                 <progress id="healthval" value="500" max="1000" onclick="getval()"></progress>
+
             </div>
             <div id="stamina">
                 <label>Stamina</label>
                 <br>
+
+                <progress id="staminaval" value="1000" max="1000"></progress>
+
                 <progress id="staminaval" value="500" max="1000" onclick="getval()"></progress>
+
             </div>
             <div id="food">
                 <label>Food</label>
                 <br>
+
+                <progress id="foodval" value="1000" max="1000"></progress>
+
                 <progress id="foodval" value="500" max="1000" onclick="getval()"></progress>
+
             </div>
             <div id="mentalHealth">
-                <label>Mental Health</label>
+                <label>Excitement</label>
                 <br>
                 <progress id="mental_health" value="500" max="1000"></progress>
             </div>
         </div>
         <div id="main">
-            <div id="clock">
-                <span id="minutes">00</span>
-                <span>:</span>
-                <span id="seconds">00</span>
-                <span id="session">AM</span>
-            </div>
-            <div><span id="greeting"></span></div>
-            <div id="playground">
-                <img src="" id="player">
-            </div>
-            <div id="button">
-                <div>
-                    <button>Play</button>
+            <div>
+                <div id="clock">
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
                 </div>
-                <div>
-                    <button onclick="incSleep()">Sleep</button>
+                <div><span id="greeting"></span></div>
+                <div id="playground">
+
                 </div>
-                <div>
-                    <button onclick="incFood()">Food</button>
-                </div>
-                <div>
-                    <button onclick="incMed()">Medicine</button>
+                <div id="button">
+                    <div>
+                        <button>Play</button>
+                    </div>
+                    <div>
+                        <button onclick="incSleep()">Sleep</button>
+                    </div>
+                    <div>
+                        <button onclick="incFood()">Food</button>
+                    </div>
+                    <div>
+                        <button onclick="incMed()">Medicine</button>
+                    </div>
                 </div>
             </div>
             <img src="" id="player" />
-            
+
         </div>
         <div id="level">
             <label>level <span id="levelup">0</span></label>
@@ -82,7 +95,11 @@
             const pet = document.getElementById("player");
             pet.setAttribute("src", summon);
         })
+        $("#play").click(function () {
+            window.location.href = 'play.html';
+        })
     </script>
+
 </body>
 
 </html>

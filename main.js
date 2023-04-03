@@ -14,6 +14,22 @@ function levelup(){
     }
 }
 
+// Mendapatkan elemen progress bar HTML
+const progressBar = document.querySelector('#health');
+
+// Memeriksa apakah ada checkpoint progress di local storage
+const progressCheckpoint = localStorage.getItem('progressCheckpoint');
+if (progressCheckpoint) {
+  // Jika ada, mengatur nilai progress bar HTML ke nilai checkpoint
+  progressBar.value = progressCheckpoint;
+}
+
+// Menyimpan nilai progress bar HTML ke local storage setiap kali nilai berubah
+progressBar.addEventListener('change', () => {
+  localStorage.setItem('progressCheckpoint', progressBar.value);
+});
+
+
 function incSleep(){
     stamina.value += 19;
     food.value -= 3;
@@ -93,6 +109,5 @@ function displayTime() {
 }
 setInterval(displayTime, 10);
 //clockscript  
-
 
 
