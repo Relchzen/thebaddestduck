@@ -96,6 +96,23 @@ function changeDirection(e) {
     }
 }
 
+function moveUp(){
+    velocityX = 0;
+    velocityY = -1;
+}
+function moveDown(){
+    velocityX = 0;
+    velocityY = 1;
+}
+function moveLeft(){
+    velocityX = -1;
+    velocityY = 0;
+}
+function moveRight(){
+    velocityX = 1;
+    velocityY = 0;
+}
+
 function placeFood() {
     //0-1) *cols -> (0-19.9999) ->(0-19) *25
     foodX = Math.floor(Math.random() * cols) * blocksize;
