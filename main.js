@@ -79,6 +79,12 @@ function incMental(){
     window.localStorage.setItem("food", food.value);
     levelup()
 }
+
+function spawnPoop(){
+    let poop = document.getElementById("poop");
+    poop.setAttribute("img", "assets/money-cash.gif");
+}
+
 //clockscript
 function displayTime() {
     var dateTime = new Date();
