@@ -25,22 +25,19 @@
             </div>
             <div id="health" class="status">
                 <label>Health</label>
-                <br>
                 <progress id="healthval" value="500" max="1000" onclick="getval()"></progress>
             </div>
             <div id="stamina" class="status">
                 <label>Stamina</label>
-                <br>
                 <progress id="staminaval" value="500" max="1000" onclick="getval()"></progress>
             </div>
             <div id="food" class="status">
-                <label>Food</label>
-                <br>              
+                <label>Food</label>              
                 <progress id="foodval" value="500" max="1000" onclick="getval()"></progress>
             </div>
             <div id="mentalHealth" class="status">
                 <label>Excitement</label>
-                <progress id="mental_health" min="50" max="1000"></progress>
+                <progress id="mental_health" min="500" max="1000"></progress>
             </div>
         </div>
         <div id="main">
@@ -57,7 +54,7 @@
                 </div>
                 <div id="button">
                     <div>
-                        <button id="play">Play</button>
+                        <button onclick="incMental()"id="play">Play</button>
                     </div>
                     <div>
                         <button onclick="incSleep()">Sleep</button>

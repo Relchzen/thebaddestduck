@@ -40,9 +40,9 @@ progressBar.addEventListener('change', () => {
 });
 
 function incSleep(){
-    stamina.value += 19;
+    stamina.value += 190;
     window.localStorage.setItem("stamina", stamina.value);
-    food.value -= 3;
+    food.value -= 30;
     window.localStorage.setItem("food", food.value);
     xpbar.value +=100;
     window.localStorage.setItem("xp", xpbar.value);
@@ -50,7 +50,7 @@ function incSleep(){
 }
 
 function incFood(){
-    food.value += 16;
+    food.value += 160;
     window.localStorage.setItem("food", food.value);
 
     xpbar.value +=100;
@@ -59,13 +59,24 @@ function incFood(){
 }
 
 function incMed(){
-    health.value += 20;
+    health.value += 200;
     window.localStorage.setItem("health", health.value);
     xpbar.value +=100;
     window.localStorage.setItem("xp", xpbar.value);
     levelup()
 }
 
+function incMental(){
+    mental_health.value += 200;
+    window.localStorage.setItem("mental_health",mental_health.value);
+    xpbar.value += 200;
+    window.localStorage.setItem("xp", xpbar.value);
+    stamina.value -= 100;
+    window.localStorage.setItem("stamina", stamina.value);
+    food.value -= 100;
+    window.localStorage.setItem("food", food.value);
+    levelup()
+}
 //clockscript
 function displayTime() {
     var dateTime = new Date();
