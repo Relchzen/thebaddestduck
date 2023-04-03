@@ -52,9 +52,10 @@ $("#characterbutton").click(function() {
 });
 
 $("#characterbutton").click(function(){
-    const pet = document.getElementById("previewImage");
-    if(pet.value){
-      window.localStorage.setItem("previewImage", pet.value);
+    const pet = document.getElementById("characterImage");
+
+    if(pet){
+      window.localStorage.setItem("previewImage", pet.getAttribute("src "));
       window.location.href = "main.html";
     }
 });

@@ -1,17 +1,18 @@
-@import url(https://fonts.googleapis.com/css2?family=Sriracha&display=swap);
 body {
-  background-repeat: repeat-y;
-  background-size:110%;
+  background-image: url(./asset/pixelBG2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
   background-color: #403660;
-  font-family: 'Sriracha', cursive;
-  color: #8c33cc;
+  font-family: "Indie Flower";
+  color: #8e7cc3;
   align-items: center;
   margin-top: 20px;
   margin-left: 80px;
   margin-right: 80px;
 }
 
-.container{
+.container {
   margin-left: 20px;
   margin-top: 20px;
   margin-right: 20px;
@@ -30,7 +31,6 @@ progress {
   background-color: crimson;
 }
 
-
 progress::-moz-progress-bar {
   background: lightblue;
 }
@@ -48,25 +48,21 @@ progress::-webkit-progress-bar {
 #health {
   margin-bottom: 10px;
   width: 200px;
-
 }
 
 #stamina {
   margin-bottom: 10px;
   width: 200px;
-
 }
 
 #mentalHealth {
   margin-bottom: 10px;
   width: 200px;
-
 }
 
 #food {
   margin-bottom: 10px;
   width: 200px;
-
 }
 
 #main {
