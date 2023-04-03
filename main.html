@@ -16,23 +16,35 @@
     <audio autoplay="1" loop="true" src="./backsound/WIIsong.m4a"></audio>
 </head>
 
-<body>
+<body id="background">
     <div class="bungkus">
             <div class="container">
                 <div id="health">
                     <label>Health</label>
                     <br>
-                    <progress id="health" value="100" max="100" onclick="getval()"></progress>
+<<<<<<<<< Temporary merge branch 1
+                    <progress id="healthval" value="1000" max="1000" ></progress>
+=========
+                    <progress id="healthval" value="500" max="1000" onclick="getval()"></progress>
+>>>>>>>>> Temporary merge branch 2
                 </div>
                 <div id="stamina">
                     <label>Stamina</label>
                     <br>
-                    <progress id="stamina" value="100" max="100" onclick="getval()"></progress>
+<<<<<<<<< Temporary merge branch 1
+                    <progress id="staminaval" value="1000" max="1000" ></progress>
+=========
+                    <progress id="staminaval" value="500" max="1000" onclick="getval()"></progress>
+>>>>>>>>> Temporary merge branch 2
                 </div>
                 <div id="food">    
                     <label>Food</label>
                     <br>
-                    <progress id="food" value="100" max="100" onclick="getval()"></progress>
+<<<<<<<<< Temporary merge branch 1
+                    <progress id="foodval" value="1000" max="1000" ></progress>
+=========
+                    <progress id="foodval" value="500" max="1000" onclick="getval()"></progress>
+>>>>>>>>> Temporary merge branch 2
                 </div>
                 <div id="mentalHealth">
                     <label>Excitement</label>
@@ -48,33 +60,37 @@
                     <span id="seconds">00</span>
                     <span id="session">AM</span>
                 </div>
-            </div>
-            <img src="" id="player"/>
+                <div><span id="greeting"></span></div>
+                <div id="playground">
 
+                </div>
+                <div id="button">
+                    <div>
+                        <button >Play</button>
+                    </div>
+                    <div>
+                        <button onclick="incSleep()">Sleep</button>
+                    </div>
+                    <div>
+                        <button onclick="incFood()">Food</button>
+                    </div>
+                    <div>
+                        <button onclick="incMed()">Medicine</button>
+                    </div>
+                </div>
+            </div>
+            <img src="" id="player" />
+            
         </div>
         <div id="level">
-            <label>level</label>
+            <label>level <span id="levelup">0</span></label>
             <br>
-            <progress id="level" value="100" max="100" ></progress>
-        </div>
-        <div id="button">
-            <div>
-                <button id="play">Play</button>
-            </div>
-            <div>
-                <button onclick="incSleep()">Sleep</button>
-            </div>
-            <div>
-                <button onclick="incFood()">Food</button>
-            </div>
-            <div>
-                <button onclick="incMed()">Medicine</button>
-            </div>
+            <progress id="levelval" value="0" max="1000" ></progress>
         </div>
     </div>
     <script src="main.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             const summon = window.localStorage.getItem("image");
             const pet = document.getElementById("player");
             pet.setAttribute("src", summon);

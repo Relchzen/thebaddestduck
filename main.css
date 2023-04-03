@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Sriracha&display=swap);
-
+<<<<<<<<< Temporary merge branch 1
 body {
   background-image: url(./asset/pixelBG2.gif);
   background-repeat: no-repeat;
@@ -8,14 +7,37 @@ body {
   color: #233251;
   display: grid;
   background-color: #403660;
-  font-family: 'Sriracha', cursive;
+  font-family: "Indie Flower";
   color: #8e7cc3;
+=========
+@import url(https://fonts.googleapis.com/css2?family=Sriracha&display=swap);
+body {
+  background-image: url(./asset/pixelBG2.gif);
+  background-repeat: repeat-y;
+  background-size:110%;
+  background-color: #403660;
+  font-family: 'Sriracha', cursive;
+  color: #f4ffa3;
+>>>>>>>>> Temporary merge branch 2
   align-items: center;
   margin-top: 20px;
   margin-left: 80px;
   margin-right: 80px;
 }
- 
+<<<<<<<<< Temporary merge branch 1
+
+#statusbar {
+  background-color: pink;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid black;
+  border-radius: 5px;
+  width: 800px;
+  height: 150px;
+}
+=========
+>>>>>>>>> Temporary merge branch 2
+
 .container {
   margin-left: 20px;
   margin-top: 20px;
@@ -84,9 +106,14 @@ progress::-webkit-progress-bar {
   border-radius: 20px;
 }
 
-#player{
-  width: 200px;
+<<<<<<<<< Temporary merge branch 1
+#player {
+  width: 100px;
   position: relative;
+=========
+#playground{
+  height: 470px;
+>>>>>>>>> Temporary merge branch 2
 }
 #level {
   text-align: center;
@@ -115,4 +142,10 @@ progress::-webkit-progress-bar {
   background-color: rgba(249, 249, 249, 0.398);
   border-radius: 12px;
   width: 100px;
+}
+
+#player{
+  width: 150px;
+  height: 150px;
+  position: relative;
 }
