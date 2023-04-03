@@ -1,4 +1,4 @@
-let health = document.getElementById("healthval");
+    let health = document.getElementById("healthval");
 let stamina = document.getElementById("staminaval");
 let food = document.getElementById("foodval");
 let mental_health = document.getElementById("mental_health");
@@ -40,23 +40,28 @@ progressBar.addEventListener('change', () => {
 
 function incSleep(){
     stamina.value += 19;
-    food.value -= 3;
-    xpbar.value +=100;
     window.localStorage.setItem("stamina", stamina.value);
+    food.value -= 3;
     window.localStorage.setItem("food", food.value);
-    window.localStorage.setItem("levelval", level.value);
+    xpbar.value +=100;
+    window.localStorage.setItem("xp", xpbar.value);
     levelup()
 }
 
 function incFood(){
     food.value += 16;
+    window.localStorage.setItem("food", food.value);
+
     xpbar.value +=100;
+    window.localStorage.setItem("xp", xpbar.value);
     levelup()
 }
 
 function incMed(){
     health.value += 20;
+    window.localStorage.setItem("health", health.value);
     xpbar.value +=100;
+    window.localStorage.setItem("xp", xpbar.value);
     levelup()
 }
 
