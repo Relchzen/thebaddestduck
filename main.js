@@ -1,4 +1,4 @@
-let health = document.getElementById("healthval");
+    let health = document.getElementById("healthval");
 let stamina = document.getElementById("staminaval");
 let food = document.getElementById("foodval");
 let mental_health = document.getElementById("mental_health");
@@ -44,7 +44,6 @@ function incSleep(){
     xpbar.value +=100;
     window.localStorage.setItem("stamina", stamina.value);
     window.localStorage.setItem("food", food.value);
-    window.localStorage.setItem("levelval", level.value);
     levelup()
 }
 
