@@ -22,7 +22,7 @@ body {
   background-color: pink;
   border: 3px solid black;
   border-radius: 5px;
-  height: 260px;
+  height: 300px;
 }
 
 .status {
@@ -31,6 +31,13 @@ body {
   width: 220px;
   height: 50px;
   justify-content: center;
+}
+
+#petname {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 26px;
 }
 
 #level label {
@@ -109,7 +116,7 @@ progress::-webkit-progress-bar {
 }
 
 #player {
-  width: 150px;
-  height: 150px;
+  width: 450px;
+  height: 450px;
   position: relative;
 }

@@ -19,6 +19,7 @@
 <body id="background">
     <div class="container">
         <div id="statusbar">
+            <div id="petname"></div>
             <div id="level" class="status">
                 <label>level <span id="levelplayer"></span></label>
                 <progress id="levelbar"></progress>
@@ -73,6 +74,7 @@
     <script src="main.js"></script>
     <script>
         $(document).ready(function () {
+            $("#petname").html(localStorage.getItem("charactername"));
             $("#levelplayer").attr("level", localStorage.getItem("level"));
             $("#levelplayer").html(localStorage.getItem("level"));
             $("#levelbar").val(localStorage.getItem("xp"));
@@ -83,7 +85,14 @@
             $("#foodval").val(localStorage.getItem("food"));
             $("#mental_health").val(localStorage.getItem("mental_health"));
             
-            const summon = window.localStorage.getItem("image");
+            if(Number(localStorage.getItem("level")) >= 1 && Number(localStorage.getItem("level")) <= 5) {
+                var summon = window.localStorage.getItem("image");
+            } else if(Number(localStorage.getItem("level")) > 5 && Number(localStorage.getItem("level")) <= 10) {
+                var summon = window.localStorage.getItem("secondform");
+            } else if(Number(localStorage.getItem("level")) > 10) {
+                var summon = window.localStorage.getItem("thirdform");
+            }
+            
             const pet = document.getElementById("player");
             pet.setAttribute("src", summon);
 

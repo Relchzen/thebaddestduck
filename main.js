@@ -21,6 +21,15 @@ function levelup(){
         window.localStorage.setItem("xp", xp);
         window.localStorage.setItem("maxxp", maxxp);
         window.localStorage.setItem("level", level);
+        
+        if(level >= 1 && level <= 5) {
+            var summon = window.localStorage.getItem("image");
+        } else if(level > 5 && level <= 10) {
+            var summon = window.localStorage.getItem("secondform");
+        } else if(level > 10) {
+            var summon = window.localStorage.getItem("thirdform");
+        }
+        document.getElementById("player").setAttribute("src", summon);
     }
 
 }

@@ -9,6 +9,8 @@ characters.forEach(function(char) {
 
     const image = this.getAttribute("src");
     const desc = this.getAttribute("desc");
+    const second = this.getAttribute("second");
+    const third = this.getAttribute("third");
     button = document.getElementById("characterbutton");
 
     button.removeAttribute("hidden");
@@ -24,6 +26,8 @@ characters.forEach(function(char) {
 
     descbox = document.getElementById("characterdescription");
     descbox.innerHTML = desc;
+    window.localStorage.setItem("secondform", second);
+    window.localStorage.setItem("thirdform", third);
   });
 });
 
