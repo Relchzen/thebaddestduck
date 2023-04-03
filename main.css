@@ -107,4 +107,5 @@ progress::-webkit-progress-bar {
   width: 150px;
   height: 150px;
   position: relative;
+  margin-top: 180px;
 }
