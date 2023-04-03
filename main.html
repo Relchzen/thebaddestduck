@@ -18,30 +18,30 @@
 
 <body id="background">
     <div class="container">
-        <div id="statusbar">
+        <div id="statusbar" class="item1">
+            <div id="petname"></div>
             <div id="level" class="status">
                 <label>level <span id="levelplayer"></span></label>
                 <progress id="levelbar"></progress>
             </div>
             <div id="health" class="status">
                 <label>Health</label>
-                <progress id="healthval" max="1000" min="50"></progress>
-
+                <progress id="healthval" value="500" max="1000" onclick="getval()"></progress>
             </div>
             <div id="stamina" class="status">
                 <label>Stamina</label>
-                <progress id="staminaval" max="1000" min="50"></progress>
+                <progress id="staminaval" value="500" max="1000" onclick="getval()"></progress>
             </div>
             <div id="food" class="status">
-                <label>Food</label>
-                <progress id="foodval" max="1000" min="50"></progress>
+                <label>Food</label>              
+                <progress id="foodval" value="500" max="1000" onclick="getval()"></progress>
             </div>
             <div id="mentalHealth" class="status">
                 <label>Excitement</label>
-                <progress id="mental_health" min="50" max="1000"></progress>
+                <progress id="mental_health" min="500" max="1000"></progress>
             </div>
         </div>
-        <div id="main">
+        <div id="main" class="item2">
             <div>
                 <div id="clock">
                     <span id="minutes">00</span>
@@ -52,10 +52,11 @@
                 <div><span id="greeting"></span></div>
                 <div id="playground">
                     <img src="" id="player" />
+                    <div id="poop"></div>
                 </div>
                 <div id="button">
                     <div>
-                        <button onclick="incmental()" id="play">Play</button>
+                        <button onclick="incMental()"id="play">Play</button>
                     </div>
                     <div>
                         <button onclick="incSleep()">Sleep</button>
@@ -73,18 +74,28 @@
     <script src="main.js"></script>
     <script>
         $(document).ready(function () {
-            const summon = window.localStorage.getItem("image");
+            $("#petname").html(localStorage.getItem("charactername"));
+            $("#levelplayer").attr("level", localStorage.getItem("level"));
+            $("#levelplayer").html(localStorage.getItem("level"));
+            $("#levelbar").val(localStorage.getItem("xp"));
+            $("#levelbar").attr("max", localStorage.getItem("maxxp"));
+
+            $("#healthval").val(localStorage.getItem("health"));
+            $("#staminaval").val(localStorage.getItem("stamina"));
+            $("#foodval").val(localStorage.getItem("food"));
+            $("#mental_health").val(localStorage.getItem("mental_health"));
+            
+            if(Number(localStorage.getItem("level")) >= 1 && Number(localStorage.getItem("level")) <= 5) {
+                var summon = window.localStorage.getItem("image");
+            } else if(Number(localStorage.getItem("level")) > 5 && Number(localStorage.getItem("level")) <= 10) {
+                var summon = window.localStorage.getItem("secondform");
+            } else if(Number(localStorage.getItem("level")) > 10) {
+                var summon = window.localStorage.getItem("thirdform");
+            }
+            
             const pet = document.getElementById("player");
             pet.setAttribute("src", summon);
 
-            $("#healthval").val(window.localStorage.getItem("health"));
-            $("#foodval").val(window.localStorage.getItem("food"));
-            $("#staminaval").val(window.localStorage.getItem("stamina"));
-            $("#mental_health").val(window.localStorage.getItem("mental_health"));
-            $("#levelbar").attr("max", window.localStorage.getItem("maxxp"));
-            $("#levelbar").val(window.localStorage.getItem("xp"));
-            $("#levelplayer").attr("level", window.localStorage.getItem("level"));
-            $("#levelplayer").html(window.localStorage.getItem("level"));
 
         })
         $("#play").click(function () {

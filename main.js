@@ -3,63 +3,96 @@ let stamina = document.getElementById("staminaval");
 let food = document.getElementById("foodval");
 let mental_health = document.getElementById("mental_health");
 let xpbar = document.getElementById("levelbar");
-let maxxp = xpbar.getAttribute("max");
-let level = document.getElementById("levelplayer").getAttribute("level");
+
 
 
 function levelup(){
+    var levelplayer = document.getElementById("levelplayer");
+
+    var level = Number(levelplayer.getAttribute("level"));
+    var maxxp = Number(xpbar.getAttribute("max"));
     var xp = xpbar.value;
     while(xp >= maxxp) {
         xp -= maxxp;
         maxxp += 500;
         level += 1;
-        document.getElementById("levelplayer").setAttribute("level", level);
-        document.getElementById("levelplayer").innerHTML = level;
+        levelplayer.innerHTML = level;
         xpbar.setAttribute("max", maxxp);
+        levelplayer.setAttribute("level", level);
         xpbar.value = xp;
         window.localStorage.setItem("xp", xp);
         window.localStorage.setItem("maxxp", maxxp);
         window.localStorage.setItem("level", level);
+        
+        if(level >= 1 && level <= 5) {
+            var summon = window.localStorage.getItem("image");
+        } else if(level > 5 && level <= 10) {
+            var summon = window.localStorage.getItem("secondform");
+        } else if(level > 10) {
+            var summon = window.localStorage.getItem("thirdform");
+        }
+        document.getElementById("player").setAttribute("src", summon);
     }
 
 }
 
-// Mendapatkan elemen progress bar HTML
-const progressBar = document.querySelector('#health');
+// // Mendapatkan elemen progress bar HTML
+// const progressBar = document.querySelector('#health');
 
-// Memeriksa apakah ada checkpoint progress di local storage
-const progressCheckpoint = localStorage.getItem('progressCheckpoint');
-if (progressCheckpoint) {
-  // Jika ada, mengatur nilai progress bar HTML ke nilai checkpoint
-  progressBar.value = progressCheckpoint;
-}
+// // Memeriksa apakah ada checkpoint progress di local storage
+// const progressCheckpoint = localStorage.getItem('progressCheckpoint');
+// if (progressCheckpoint) {
+//   // Jika ada, mengatur nilai progress bar HTML ke nilai checkpoint
+//   progressBar.value = progressCheckpoint;
+// }
 
-// Menyimpan nilai progress bar HTML ke local storage setiap kali nilai berubah
-progressBar.addEventListener('change', () => {
-  localStorage.setItem('progressCheckpoint', progressBar.value);
-});
-
+// // Menyimpan nilai progress bar HTML ke local storage setiap kali nilai berubah
+// progressBar.addEventListener('change', () => {
+//   localStorage.setItem('progressCheckpoint', progressBar.value);
+// });
 
 function incSleep(){
-    stamina.value += 19;
-    food.value -= 3;
-    xpbar.value +=100;
+    stamina.value += 190;
     window.localStorage.setItem("stamina", stamina.value);
+    food.value -= 30;
     window.localStorage.setItem("food", food.value);
-    window.localStorage.setItem("levelval", level.value);
+    xpbar.value +=100;
+    window.localStorage.setItem("xp", xpbar.value);
     levelup()
 }
 
 function incFood(){
-    food.value += 16;
+    food.value += 160;
+    window.localStorage.setItem("food", food.value);
+
     xpbar.value +=100;
+    window.localStorage.setItem("xp", xpbar.value);
     levelup()
 }
 
 function incMed(){
-    health.value += 20;
+    health.value += 200;
+    window.localStorage.setItem("health", health.value);
     xpbar.value +=100;
+    window.localStorage.setItem("xp", xpbar.value);
     levelup()
+}
+
+function incMental(){
+    mental_health.value += 200;
+    window.localStorage.setItem("mental_health",mental_health.value);
+    xpbar.value += 200;
+    window.localStorage.setItem("xp", xpbar.value);
+    stamina.value -= 100;
+    window.localStorage.setItem("stamina", stamina.value);
+    food.value -= 100;
+    window.localStorage.setItem("food", food.value);
+    levelup()
+}
+
+function spawnPoop(){
+    let poop = document.getElementById("poop");
+    poop.setAttribute("img", "assets/money-cash.gif");
 }
 
 //clockscript
@@ -71,6 +104,12 @@ function displayTime() {
     var greet = document.getElementById('greeting');
     const body = document.body
     const playground = document.getElementById("main")
+
+    if (min >= 12) {
+        session.innerHTML = 'PM';
+    } else {
+        session.innerHTML = 'AM';
+    }
 
     min = min%24;
 
@@ -124,4 +163,3 @@ function displayTime() {
 }
 setInterval(displayTime, 10);
 //clockscript  
-
