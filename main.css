@@ -1,18 +1,16 @@
-
 body {
   background-image: url(./asset/pixelBG2.gif);
   background-repeat: repeat-y;
-  background-size:110%;
+  background-size: 110%;
   background-color: #403660;
-  font-family: 'Sriracha', cursive;
-  color: #f4ffa3;
+  font-family: "Sriracha", cursive;
+  color: #233251;
 
   align-items: center;
   margin-top: 20px;
   margin-left: 80px;
   margin-right: 80px;
 }
-
 
 .container {
   margin-left: 20px;
@@ -28,7 +26,7 @@ body {
   background-color: pink;
   border: 3px solid black;
   border-radius: 5px;
-  height: 260px;
+  height: 300px;
 }
 
 .status {
@@ -37,6 +35,13 @@ body {
   width: 220px;
   height: 50px;
   justify-content: center;
+}
+
+#petname {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 26px;
 }
 
 #level label {
@@ -83,14 +88,12 @@ progress::-webkit-progress-bar {
   border-radius: 20px;
 }
 
-
 #player {
   width: 100px;
   position: relative;
 }
-#playground{
+#playground {
   height: 470px;
-
 }
 #level {
   text-align: center;
@@ -122,8 +125,8 @@ progress::-webkit-progress-bar {
 }
 
 #player {
-  width: 150px;
-  height: 150px;
+  width: 400px;
+  height: 400px;
   position: relative;
 }
 
