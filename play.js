@@ -27,7 +27,7 @@ window.onload = function() {
     context = board.getContext("2d");
 
     placeFood();
-    document.addEventListener("keyup", changeDirection);
+    document.addEventListener("keydown", changeDirection);
     //Update();
     setInterval(Update, 1000/10);
 }
@@ -56,8 +56,8 @@ function Update() {
     }
 
     context.fillStyle = "lime";
-    snakeX += velocityX * blocksize;
-    snakeY += velocityY * blocksize;
+    snakeX += velocityX ;
+    snakeY += velocityY ;
     context.fillRect(snakeX, snakeY, blocksize, blocksize);
     for(let i = 0; i<snakeBody.length; i++){
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blocksize, blocksize);
