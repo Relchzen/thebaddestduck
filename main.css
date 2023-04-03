@@ -1,12 +1,18 @@
+
 body {
   background-image: url(./asset/pixelBG2.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #233251;
-  display: grid;
+  background-repeat: repeat-y;
+  background-size:110%;
   background-color: #403660;
-  font-family: "Indie Flower";
+  font-family: 'Sriracha', cursive;
+  color: #f4ffa3;
+
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
+
 
 .container {
   margin-left: 20px;
@@ -83,8 +89,14 @@ progress::-webkit-progress-bar {
   border-radius: 20px;
 }
 
-#playground {
+
+#player {
+  width: 100px;
+  position: relative;
+}
+#playground{
   height: 470px;
+
 }
 #level {
   text-align: center;
