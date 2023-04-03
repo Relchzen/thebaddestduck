@@ -30,30 +30,21 @@ progressBar.addEventListener('change', () => {
 });
 
 
-
 function incSleep(){
-    stamina.value += 9;
-    food.value -= 30;
-    health.value += 6;
-    mental_health.value += 2;
+    stamina.value += 19;
+    food.value -= 3;
     level.value +=100;
     levelup()
 }
 
 function incFood(){
-    stamina.value += 3;
     food.value += 16;
-    health.value -=6;
-    mental_health.value += 1;
     level.value +=100;
     levelup()
 }
 
 function incMed(){
-    stamina.value -= 10;
-    food.value -= 10;
     health.value += 20;
-    mental_health.value -= 6;
     level.value +=100;
     levelup()
 }
