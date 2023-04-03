@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>play</title>
-</head>
-<body>
-    <canvas id="canvas"></canvas>
+    <title>Snake</title>
+    <link rel="stylesheet" href="play.css">
     <script src="play.js"></script>
-    <button id="GoBack" onclick="history.back()">Go Back</button>
+</head>
+<body style="background-image: url(./asset/pixelBG2.gif);">
+    <div id="bunkus">
+        <h1>Snake</h1>
+        <canvas id="board" style="border: 5px solid black;"></canvas>
+    </div>
+    <div>
+        <button id="back" onclick="history.back()" >Go Back</button>
+    </div>
     <script>
-
+        $("#back").click(function() {
+            window.location.href = "main.html";
+        })
     </script>
 </body>
 </html>
