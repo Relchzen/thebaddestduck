@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 let health = document.getElementById("health");
 let stamina = document.getElementById("stamina");
 let food = document.getElementById("food");
@@ -135,7 +135,7 @@ function component(width, height, color, x, y) {
   function moveright() {
     pimg.speedX += 1;
   }
-=======
+
 // board
 var blocksize = 25;
 var rows = 20;
@@ -237,4 +237,3 @@ function placeFood(){
     foodX = Math.floor(Math.random()* cols) *blocksize;
     foodY = Math.floor(Math.random()* rows) *blocksize;
 }
->>>>>>> 118c1cc34f17a035169af6c301e972951963d37c
