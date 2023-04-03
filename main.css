@@ -136,21 +136,69 @@ progress::-webkit-progress-bar {
     flex-direction: column;
     justify-content: space-around;
   }
+
+  
+  #petname {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 26px;
+  }
+  #button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
   #button button {
+    display: grid;
+    grid-template-columns: auto auto;
     margin-top: 20px;
     background-color: rgba(249, 249, 249, 0.398);
     border-radius: 12px;
     width: 70px;
   }
+  #player {
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  #playground {
+    height: 430px;
+  }
 }
 
-@media(max-width:380px){
+@media(max-width:500px){
+  #player {
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  #button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media(max-width:400px){
   progress {
     border: 2px solid black;
     border-radius: 10px;
     width: 100px;
     height: 20px;
     background-color: rgb(87, 196, 240);
+  }
+  #petname {
+    text-align: left;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 26px;
   }
   .status {
     display: grid;
@@ -164,11 +212,66 @@ progress::-webkit-progress-bar {
     height: 100px;
     position: relative;
   }
+  #button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
   #button button {
     margin-top: 20px;
     background-color: rgba(249, 249, 249, 0.398);
     border-radius: 12px;
-    width: 50px;
+    width: 10px;
+  }
+  #playground {
+    height: 400px;
   }
 }
 
+@media(max-width:280px){
+  progress {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 70px;
+    height: 20px;
+    background-color: rgb(87, 196, 240);
+  }
+  #petname {
+    text-align: left;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 26px;
+  }
+  .status {
+    display: grid;
+    text-align: left;
+    width: 220px;
+    height: 50px;
+    justify-content: left;
+  }
+  #player {
+    width: 70px;
+    height: 70px;
+    position: relative;
+  }
+  #button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+  #button button {
+    margin-top: 20px;
+    background-color: rgba(249, 249, 249, 0.398);
+    border-radius: 12px;
+    width: 10px;
+  }
+  #playground {
+    height: 400px;
+  }
+}
