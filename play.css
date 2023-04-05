@@ -1,9 +1,11 @@
 body{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Indie Flower";
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-around;
+  background-size:120%;
+  background-repeat:repeat-y;
 }
 
 #bungkus{
@@ -11,9 +13,44 @@ body{
 }
 
 #tombol{
-  
   margin-top: 400px;
   display: inline;
 
 }
+button {
+  margin-top: 20px;
+  background-color: rgba(249, 249, 249, 0.398);
+  border-radius: 12px;
+  width: 100px;
+}
 
+canvas{
+  height: 500px;
+  width: 500px;
+}
+@media(max-width:600px){
+  canvas{
+    height: 300px;
+    width: 300px;
+  }
+}
+@media(max-width :400px){
+  canvas{
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media(max-width :300px){
+  canvas{
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media(max-width :200px){
+  canvas{
+    height: 170px;
+    width: 170px;
+  }
+}
